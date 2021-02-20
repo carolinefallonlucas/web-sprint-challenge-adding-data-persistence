@@ -5,6 +5,7 @@ const db = require("../../data/dbConfig");
 module.exports = {
     getAll()
     {
-        return db("tasks");
+        return db("tasks as t");
+        .join('projects')
     }
 };
